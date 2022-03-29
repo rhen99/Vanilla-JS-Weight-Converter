@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Weight Converter</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main">
+        <form class="weight-form">
+          <div class="weight-form-field">
+            <label for="amount">Amount</label>
+            <input
+              type="number"
+              class="weight-form-input"
+              id="amount"
+              autocomplete="off"
+              min="1"
+              value="1"
+            />
+          </div>
+
+          <div class="weight-form-field">
+            <select id="unit1">
+              <option selected disabled>- Select Current Unit</option>
+              <option value="g">Grams</option>
+              <option value="kg">Kilograms</option>
+              <option value="t">Metric Tons</option>
+              <option value="oz">Ounce</option>
+              <option value="lb">Pounds</option>
+            </select>
+          </div>
+          <p>to</p>
+          <div class="weight-form-field">
+            <select id="unit2">
+              <option selected disabled>- Select Another Unit</option>
+              <option value="g">Grams</option>
+              <option value="kg">Kilograms</option>
+              <option value="t">Metric Tons</option>
+              <option value="oz">Ounce</option>
+              <option value="lb">Pounds</option>
+            </select>
+          </div>
+          <div class="weight-form-field">
+            <input type="submit" class="weight-form-submit" value="Convert" />
+          </div>
+        </form>
+        <h3 id="result"></h3>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
