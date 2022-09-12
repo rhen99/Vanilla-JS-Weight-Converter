@@ -26,13 +26,13 @@ function gramsTo(amount) {
     case "g":
       return alert("Select a different unit.");
     case "kg":
-      return roundToTwo(amount / 1000) + " Kilogram(s)";
+      return roundToTwoDecimalPlaces(amount / 1000) + " Kilogram(s)";
     case "t":
-      return roundToTwo(amount / 1000000) + " Metric Ton(s)";
+      return roundToTwoDecimalPlaces(amount / 1000000) + " Metric Ton(s)";
     case "oz":
-      return roundToTwo(amount / 28.34952) + " Ounce(s)";
+      return roundToTwoDecimalPlaces(amount / 28.34952) + " Ounce(s)";
     case "lb":
-      return roundToTwo(amount * 0.0022) + " Pound(s)";
+      return roundToTwoDecimalPlaces(amount * 0.0022) + " Pound(s)";
     default:
       alert("Please select a unit");
   }
@@ -40,15 +40,15 @@ function gramsTo(amount) {
 function kiloTo(amount) {
   switch (unit2.value) {
     case "g":
-      return roundToTwo(amount * 1000) + " Gram(s)";
+      return roundToTwoDecimalPlaces(amount * 1000) + " Gram(s)";
     case "kg":
       return alert("Select a different unit.");
     case "t":
-      return roundToTwo(amount / 1000) + " Ton(s)";
+      return roundToTwoDecimalPlaces(amount / 1000) + " Ton(s)";
     case "oz":
-      return roundToTwo(amount * 35.274) + " Ounce(s)";
+      return roundToTwoDecimalPlaces(amount * 35.274) + " Ounce(s)";
     case "lb":
-      return roundToTwo(amount * 2.205) + " Pound(s)";
+      return roundToTwoDecimalPlaces(amount * 2.205) + " Pound(s)";
     default:
       alert("Please select a unit");
   }
@@ -56,15 +56,15 @@ function kiloTo(amount) {
 function tonTo(amount) {
   switch (unit2.value) {
     case "g":
-      return roundToTwo(amount * "1e+6") + " Gram(s)";
+      return roundToTwoDecimalPlaces(amount * "1e+6") + " Gram(s)";
     case "kg":
-      return roundToTwo(amount * 1000) + " Kilogram(s)";
+      return roundToTwoDecimalPlaces(amount * 1000) + " Kilogram(s)";
     case "t":
       return alert("Select a different unit.");
     case "oz":
-      return roundToTwo(amount * 35274) + " Ounce(s)";
+      return roundToTwoDecimalPlaces(amount * 35274) + " Ounce(s)";
     case "lb":
-      return roundToTwo(amount * 2205) + " Pounds";
+      return roundToTwoDecimalPlaces(amount * 2205) + " Pounds";
     default:
       alert("Please select a unit");
   }
@@ -72,15 +72,15 @@ function tonTo(amount) {
 function ounceTo(amount) {
   switch (unit2.value) {
     case "g":
-      return roundToTwo(amount * 28.35) + " Gram(s)";
+      return roundToTwoDecimalPlaces(amount * 28.35) + " Gram(s)";
     case "kg":
-      return roundToTwo(amount / 35.274) + " Kilogram(s)";
+      return roundToTwoDecimalPlaces(amount / 35.274) + " Kilogram(s)";
     case "t":
-      return roundToTwo(amount / 35274) + " Ton(s)";
+      return roundToTwoDecimalPlaces(amount / 35274) + " Ton(s)";
     case "oz":
       return alert("Select a different unit.");
     case "lb":
-      return roundToTwo(amount / 16) + " Pound(s)";
+      return roundToTwoDecimalPlaces(amount / 16) + " Pound(s)";
     default:
       alert("Please select a unit");
   }
@@ -88,13 +88,13 @@ function ounceTo(amount) {
 function poundTo(amount) {
   switch (unit2.value) {
     case "g":
-      return roundToTwo(amount * 454) + " Gram(s)";
+      return roundToTwoDecimalPlaces(amount * 454) + " Gram(s)";
     case "kg":
-      return roundToTwo(amount / 2.205) + " Kilogram(s)";
+      return roundToTwoDecimalPlaces(amount / 2.205) + " Kilogram(s)";
     case "t":
-      return roundToTwo(amount / 2205) + " Ton(s)";
+      return roundToTwoDecimalPlaces(amount / 2205) + " Ton(s)";
     case "oz":
-      return roundToTwo(amount * 16) + " Ounce(s)";
+      return roundToTwoDecimalPlaces(amount * 16) + " Ounce(s)";
     case "lb":
       return alert("Select a different unit.");
     default:
@@ -106,6 +106,6 @@ function printResult(convertion) {
     result.innerHTML = convertion;
   }
 }
-function roundToTwo(num) {
+function roundToTwoDecimalPlaces(num) {
   return +(Math.round(num + "e+2") + "e-2");
 }
